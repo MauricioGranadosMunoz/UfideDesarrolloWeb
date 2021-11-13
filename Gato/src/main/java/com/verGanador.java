@@ -5,8 +5,8 @@
  */
 package com;
 
-import dao.Persona;
-import dao.PersonaRepositorio;
+import dao.Juego;
+import dao.Juegorepositorio;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
@@ -19,24 +19,24 @@ import javax.enterprise.context.RequestScoped;
  */
 @Named(value = "verPersonas")
 @RequestScoped
-public class VerPersonas extends Persona{
-private List<Persona> listaPersonas=new ArrayList<Persona>();
+public class verGanador extends Juego{
+private List<Juego> listaPersonas=new ArrayList<Juego>();
 
-    public List<Persona> getListaPersonas() {
+    public List<Juego> getListaPersonas() {
         return listaPersonas;
     }
 
-    public void setListaPersonas(List<Persona> listaPersonas) {
+    public void setListaPersonas(List<Juego> listaPersonas) {
         this.listaPersonas = listaPersonas;
     }
 
     /**
      * Creates a new instance of VerPersonas
      */
-    public VerPersonas() {
+    public verGanador() {
     }
     @PostConstruct
 public void init(){
-    listaPersonas = PersonaRepositorio.getListaPersonas();
+   // listaPersonas = Juegorepositorio.getListaPersonas();
 }
 }
