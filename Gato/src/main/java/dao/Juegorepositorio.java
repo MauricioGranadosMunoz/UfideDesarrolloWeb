@@ -5,7 +5,7 @@
  */
 package dao;
 
-import com.Ingresar;
+import com.Jugar;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,17 +13,17 @@ import java.util.List;
  *
  * @author Jose Ramos
  */
-public class PersonaRepositorio {
-    private static List<Persona> Listapersonas=new ArrayList<>();
+public class Juegorepositorio {
 
-     public static List<Persona> getListaPersonas() {
+/*
+     public static List<Juego> getListaPersonas() {
         return Listapersonas;
     }
    
-     public static void setListaPersonas(List<Persona> listaPersonas) {
-        PersonaRepositorio.Listapersonas = listaPersonas;
+     public static void setListaPersonas(List<Juego> listaPersonas) {
+        Juegorepositorio.Listapersonas = listaPersonas;
     }
-    public static void agregarPersona(Persona persona){
+    public static void agregarPersona(Juego persona){
         Listapersonas.add(persona);
     }
 
@@ -34,7 +34,8 @@ public class PersonaRepositorio {
                 return true;
         }
         return false;
-        */
+        
         return Listapersonas.stream().anyMatch((persona) -> (persona.getIdentificacion().equals(identificacion)));
     }
+    */
 }
