@@ -11,15 +11,15 @@ package dao;
  */
 public class Juego {
 
-    private String posicion1_1;
-    private String posicion1_2;
-    private String posicion1_3;
-    private String posicion2_1;
-    private String posicion2_2;
-    private String posicion2_3;
-    private String posicion3_1;
-    private String posicion3_2;
-    private String posicion3_3;
+    protected String posicion1_1;
+    protected String posicion1_2;
+    protected String posicion1_3;
+    protected String posicion2_1;
+    protected String posicion2_2;
+    protected String posicion2_3;
+    protected String posicion3_1;
+    protected String posicion3_2;
+    protected String posicion3_3;
 
     public String getPosicion1_1() {
         return posicion1_1;
