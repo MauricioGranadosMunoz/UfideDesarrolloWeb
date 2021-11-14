@@ -20,6 +20,15 @@ public class Juego {
     protected String posicion3_1;
     protected String posicion3_2;
     protected String posicion3_3;
+    protected String ganador;
+
+    public String getGanador() {
+        return ganador;
+    }
+
+    public void setGanador(String ganador) {
+        this.ganador = ganador;
+    }
 
     public String getPosicion1_1() {
         return posicion1_1;
