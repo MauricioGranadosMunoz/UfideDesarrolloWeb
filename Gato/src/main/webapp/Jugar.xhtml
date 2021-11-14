@@ -9,9 +9,59 @@
 
         <ui:composition template="./plantilla/plantilla.xhtml">
 
-            <ui:define name="content">
+            <ui:define name="content" >
                 <h:form class="container" style="width: 100%">
-                   
+                    <div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion1_1" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion1_1}">
+                            </h:inputText>
+                            <h:message for="posicion1_1" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion1_2" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion1_2}">
+                            </h:inputText>
+                            <h:message for="posicion1_2" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion1_3" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion1_3}">
+                            </h:inputText>
+                            <h:message for="posicion1_3" class="text-danger"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion2_1" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion2_1}">
+                            </h:inputText>
+                            <h:message for="posicion2_1" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion2_2" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion2_2}">
+                            </h:inputText>
+                            <h:message for="posicion2_2" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion2_3" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion2_3}">
+                            </h:inputText>
+                            <h:message for="posicion2_3" class="text-danger"/>
+                        </div>
+                    </div>
+                     <div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion3_1" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion3_1}">
+                            </h:inputText>
+                            <h:message for="posicion3_1" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion3_2" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion3_2}">
+                            </h:inputText>
+                            <h:message for="posicion3_2" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion3_3" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion3_3}">
+                            </h:inputText>
+                            <h:message for="posicion3_3" class="text-danger"/>
+                        </div>
+                    </div>
                 </h:form>
             </ui:define>
 

@@ -49,18 +49,20 @@ public class Jugar extends Juego {
             calcular(posicion1_1);
         } else if (posicion3_1 == posicion2_2 && posicion2_2 == posicion1_3) {//3,1 2,2 2,2 1,3   
             calcular(posicion3_1);
+        }else{
+            ganador="Empate";
         }
 
     }
 
     public String calcular(String n) {
-        String text;
+        
         if (n.equals("x")) {
-            text = "gana el jugador 1";
+            ganador="gana el jugador 1";
         } else {
-            text = "gana el jugador 2";
+            ganador = "gana el jugador 2";
         }
-        return text;
+        return ganador;
     }
 
     public void validar() {
