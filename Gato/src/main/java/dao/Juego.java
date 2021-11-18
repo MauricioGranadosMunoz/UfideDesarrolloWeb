@@ -11,9 +11,9 @@ package dao;
  */
 public class Juego {
 
-    protected String posicion1_1;
-    protected String posicion1_2;
-    protected String posicion1_3;
+    protected static String posicion1_1;
+    protected static String posicion1_2;
+    protected static String posicion1_3;
     protected String posicion2_1;
     protected String posicion2_2;
     protected String posicion2_3;

@@ -1,12 +1,80 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        Hello from Facelets
-    </h:body>
-</html>
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 
+    <body>
+
+        <ui:composition template="./plantilla/plantilla.xhtml">
+
+            <ui:define name="content" >
+                <h:form class="container" style="width: 100%">
+                    <div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion1_1" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion1_1}">
+                                <p:ajax event="blur" process="posicion1_1" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion1_2" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion1_2}">
+                                <p:ajax event="blur" process="posicion1_2" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                            <h:message for="posicion1_2" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion1_3" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion1_3}">
+                                <p:ajax event="blur" process="posicion1_3" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                            <h:message for="posicion1_3" class="text-danger"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion2_1" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion2_1}">
+                                <p:ajax event="blur" process="posicion2_1" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                            <h:message for="posicion2_1" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion2_2" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion2_2}">
+                                <p:ajax event="blur" process="posicion2_2" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                            <h:message for="posicion2_2" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion2_3" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion2_3}">
+                                <p:ajax event="blur" process="posicion2_3" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                            <h:message for="posicion2_3" class="text-danger"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion3_1" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion3_1}">
+                                <p:ajax event="blur" process="posicion3_1" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                            <h:message for="posicion3_1" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion3_2" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion3_2}">
+                                <p:ajax event="blur" process="posicion3_2" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                            <h:message for="posicion3_2" class="text-danger"/>
+                        </div>
+                        <div class="col-sm-1" style="display:inline-block">
+                            <h:inputText id="posicion3_3" required="true" requiredMessage="Campo Obligatorio" class="form-control" value="#{jugar.posicion3_3}">
+                                <p:ajax event="blur" process="posicion3_3" listener="#{jugar.rondaGato()}" update="mensajeIdentificacion"/>
+                            </h:inputText>
+                            <h:message for="posicion3_3" class="text-danger"/>
+                        </div>
+                    </div>
+                </h:form>
+                <h:outputText id="mensajeIdentificacion" value="#{jugar.mensajeIdentificacion}" class="text-danger"/>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
