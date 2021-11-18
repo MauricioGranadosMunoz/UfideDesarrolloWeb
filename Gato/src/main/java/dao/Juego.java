@@ -12,15 +12,15 @@ package dao;
 public class Juego {
 
     protected static String posicion1_1;
-    protected static String posicion1_2;
+    protected static  String posicion1_2;
     protected static String posicion1_3;
-    protected String posicion2_1;
-    protected String posicion2_2;
-    protected String posicion2_3;
-    protected String posicion3_1;
-    protected String posicion3_2;
-    protected String posicion3_3;
-    protected String ganador;
+    protected static String posicion2_1;
+    protected static String posicion2_2;
+    protected static String posicion2_3;
+    protected static String posicion3_1;
+    protected static String posicion3_2;
+    protected static String posicion3_3;
+    protected  String ganador;
 
     public String getGanador() {
         return ganador;
