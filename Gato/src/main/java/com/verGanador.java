@@ -20,15 +20,7 @@ import javax.enterprise.context.RequestScoped;
 @Named(value = "verPersonas")
 @RequestScoped
 public class verGanador extends Juego{
-private List<Juego> listaPersonas=new ArrayList<Juego>();
 
-    public List<Juego> getListaPersonas() {
-        return listaPersonas;
-    }
-
-    public void setListaPersonas(List<Juego> listaPersonas) {
-        this.listaPersonas = listaPersonas;
-    }
 
     /**
      * Creates a new instance of VerPersonas
