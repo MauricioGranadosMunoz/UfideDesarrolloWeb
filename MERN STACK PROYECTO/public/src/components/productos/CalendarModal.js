@@ -4,8 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Modal from 'react-modal';
 
 import { uiCloseModal } from '../../actions/ui';
-import { eventStartAddNew } from '../../actions/events';
-import { productoClearActiveProducto, productoStartUpdate } from '../../actions/productos';
+import { productoClearActiveProducto, productoStartAddNew, productoStartUpdate } from '../../actions/productos';
 
 
 const customStyles = {
@@ -23,6 +22,7 @@ Modal.setAppElement('#root');
 const initEvent = {
     tituloProducto: '',
     descripcionProducto: '',
+    precioProducto: 21,
 }
 
 
@@ -72,7 +72,7 @@ export const ProductosModal = () => {
         if (activeProduct) {
             dispatch(productoStartUpdate(formValues))
         } else {
-            dispatch(eventStartAddNew(formValues));
+            dispatch(productoStartAddNew(formValues));
         }
 
 

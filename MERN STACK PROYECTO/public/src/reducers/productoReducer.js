@@ -29,8 +29,8 @@ export const productoReducer = ( state = initialState, action ) => {
         case types.productoAddNew:
             return {
                 ...state,
-                events: [
-                    ...state.events,
+                productos: [
+                    ...state.productos,
                     action.payload
                 ]
             }
