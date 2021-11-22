@@ -15,7 +15,10 @@ export const types = {
     eventDeleted: '[event] Event deleted',
     eventLoaded: '[event] Events loaded',
 
+    productoUpdated: '[producto] Producto updated',
     productoLoaded: '[producto] Productos loaded',
+    productoSetActive: '[producto] Set Active',
+    productoClearActiveProducto: '[producto] Clear active producto',
 
 
     authCheckingFinish: '[auth] Finish checking login state',
