@@ -7,7 +7,8 @@
     "server": "nodemon index.js",
     "start": "node index.js",
     "public-install": "npm install --prefix public",
-    "public": "npm start --prefix public"
+    "public": "npm start --prefix public",
+    "heroku-postbuild": "npm install --prefix public && npm run build --prefix public"
   },
   "keywords": [],
   "author": "",
