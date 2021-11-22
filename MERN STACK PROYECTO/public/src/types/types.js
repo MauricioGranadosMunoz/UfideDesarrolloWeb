@@ -17,6 +17,7 @@ export const types = {
 
     productoUpdated: '[producto] Producto updated',
     productoLoaded: '[producto] Productos loaded',
+    productoDeleted: '[producto] Producto delete',
     productoSetActive: '[producto] Set Active',
     productoClearActiveProducto: '[producto] Clear active producto',
 

@@ -61,6 +61,10 @@ export const productosStartLoading = ( producto ) => {
     }
 }
 
+const productosLoaded = (productos) => ({
+    type: types.productoLoaded,
+    payload: productos
+})
 
 export const productoStartUpdate = ( producto ) => {
     return async(dispatch) => {
@@ -88,7 +92,27 @@ const productoUpdated = ( producto ) => ({
     payload: producto
 });
 
-const productosLoaded = (productos) => ({
-    type: types.productoLoaded,
-    payload: productos
-})
+export const productoStartDelete = () => {
+    return async ( dispatch, getState ) => {
+
+        const { id } = getState().producto.activeProduct;
+        try {
+            const resp = await fetchConToken(`producto/${ id }`, {}, 'DELETE' );
+            const body = await resp.json();
+
+            if ( body.ok ) {
+                dispatch( productoDeleted() );
+            } else {
+                Swal.fire('Error', body.msg, 'error');
+            }
+
+
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+}
+
+
+const productoDeleted = () => ({ type: types.eventDeleted });

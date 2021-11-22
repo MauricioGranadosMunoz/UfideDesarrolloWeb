@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import './noticias.css';
 import { uiOpenModal } from '../../actions/ui';
-import { productoSetActive } from '../../actions/productos';
+import { productoSetActive, productoStartDelete } from '../../actions/productos';
 
 export const ListaNoticiasItem = ({ producto }) => {
     const { tituloProducto, precioProducto, descripcionProducto } = producto;
@@ -10,6 +10,10 @@ export const ListaNoticiasItem = ({ producto }) => {
     const onSelectEvent = () => {
         dispatch( productoSetActive( producto ) );
         dispatch( uiOpenModal() );
+    }
+    const handleDelete = () => {
+        dispatch( productoSetActive( producto ) );
+        dispatch( productoStartDelete() );
     }
     return (
         <div className="noticia-list-item">
@@ -28,7 +32,7 @@ export const ListaNoticiasItem = ({ producto }) => {
             <button className="btn btn-outline-warning" onClick={ onSelectEvent }>
                 <i className="fas fa-edit"></i>
             </button>
-            <button  className="btn btn-outline-danger" onClick={ ()=>console.log('asd') }>
+            <button  className="btn btn-outline-danger" onClick={ handleDelete }>
                 <i className="fas fa-trash"></i>
             </button>
             </div>
