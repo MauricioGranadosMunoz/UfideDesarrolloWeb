@@ -22,6 +22,7 @@ Modal.setAppElement('#root');
 const initEvent = {
     tituloProducto: '',
     descripcionProducto: '',
+    imagenProducto: '',
     precioProducto: 21,
 }
 
@@ -36,7 +37,7 @@ export const ProductosModal = () => {
 
     const [formValues, setFormValues] = useState(initEvent);
 
-    const { descripcionProducto, tituloProducto } = formValues;
+    const { descripcionProducto, tituloProducto, imagenProducto } = formValues;
 
     useEffect(() => {
         if (activeProduct) {
@@ -97,6 +98,18 @@ export const ProductosModal = () => {
                 className="container"
                 onSubmit={handleSubmitForm}
             >
+                <div className="form-group">
+                    <label>Imagen del producto</label>
+                    <input
+                        type="text"
+                        className={`form-control ${!titleValid && 'is-invalid'} `}
+                        placeholder="Imagen del producto"
+                        name="imagenProducto"
+                        autoComplete="off"
+                        value={imagenProducto}
+                        onChange={handleInputChange}
+                    />
+                </div>
                 <div className="form-group">
                     <label>Nombre del producto</label>
                     <input

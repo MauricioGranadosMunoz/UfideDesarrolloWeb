@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { CalendarApp } from './CalendarApp';
+import { FideRunnerApp } from './FideRunnerApp';
 
 import './styles.css';
 
 ReactDOM.render(
-    <CalendarApp />,
+    <FideRunnerApp />,
   document.getElementById('root')
 );
