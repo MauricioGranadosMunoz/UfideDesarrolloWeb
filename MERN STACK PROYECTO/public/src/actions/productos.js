@@ -3,16 +3,42 @@ import { types } from '../types/types';
 import Swal from 'sweetalert2';
 
 
+export const productoStartAddNew = ( producto ) => {
+    return async( dispatch, getState ) => {
+
+        const { uid, name } = getState().auth;
+
+        try {
+            const resp = await fetchConToken('producto', producto, 'POST');
+            const body = await resp.json();
+
+            if ( body.ok ) {
+                producto.id = body.productosTienda.id;
+                producto.user = {
+                    _id: uid,
+                    name: name
+                }
+                dispatch( productoAddNew( producto ) );
+            }
 
 
-// const productoAddNew = (event) => ({
-//     type: types.productoAddNew,
-//     payload: event
-// });
+        } catch (error) {
+        //    console.log(error);
+        }
 
-export const productoSetActive = (event) => ({
+        
+
+    }
+}
+
+const productoAddNew = (producto) => ({
+    type: types.productoAddNew,
+    payload: producto
+});
+
+export const productoSetActive = (producto) => ({
     type: types.productoSetActive,
-    payload: event
+    payload: producto
 });
 
 export const productoClearActiveProducto = () => ({ type: types.productoClearActiveProducto });
