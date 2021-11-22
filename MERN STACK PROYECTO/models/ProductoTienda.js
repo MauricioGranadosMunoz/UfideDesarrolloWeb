@@ -9,6 +9,10 @@ const ProductoTiendaSchema = Schema({
     descripcionProducto: {
         type: String,        
     },
+    imagenProducto: {
+        type: String,
+        required: true      
+    },
     precioProducto: {
         type: Number,
         required: true

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { productosStartLoading } from '../../actions/productos';
 import { AddNewFab } from '../ui/AddNewFab';
 import { Navbar } from '../ui/Navbar';
-import { ProductosModal } from './CalendarModal';
+import { ProductosModal } from './ProductosModal';
 import { ListaProductos } from './ListaProductos';
 
 
@@ -20,7 +20,7 @@ export const Productos = () => {
         <>
             <Navbar />
             <div className="container">
-                <ListaProductos productos={productos}/>
+                <ListaProductos productos={productos} />
                 <AddNewFab />
             </div>
             <ProductosModal />
