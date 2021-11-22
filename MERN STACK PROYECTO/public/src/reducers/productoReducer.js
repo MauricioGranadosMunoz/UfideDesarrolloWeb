@@ -13,14 +13,33 @@ import { types } from '../types/types';
 
 const initialState = {
     productos: [],
-    activeEvent: null
+    activeProduct: null
 };
 
 
 export const productoReducer = ( state = initialState, action ) => {
 
     switch ( action.type ) {
+        case types.productoSetActive:
+            return {
+                ...state,
+                activeProduct: action.payload
+            }
         
+        case types.productoAddNew:
+            return {
+                ...state,
+                events: [
+                    ...state.events,
+                    action.payload
+                ]
+            }
+    
+        case types.productoClearActiveProducto:
+            return {
+                ...state,
+                activeProduct: null
+            }
         case types.productoLoaded:
             return {
                 ...state,

@@ -2,25 +2,19 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import './noticias.css';
 import { uiOpenModal } from '../../actions/ui';
-import { eventSetActive } from '../../actions/events';
+import { productoSetActive } from '../../actions/productos';
 
 export const ListaNoticiasItem = ({ producto }) => {
-    console.log('asd',producto);
     const { tituloProducto, precioProducto, descripcionProducto } = producto;
     const dispatch = useDispatch();
-    const onDoubleClick = (e) => {
-        console.log(e);
-        dispatch( uiOpenModal(e) );
-    }
-
-    const onSelectEvent = (e) => {
-        dispatch( eventSetActive( e ) );
-        onDoubleClick();
+    const onSelectEvent = () => {
+        dispatch( productoSetActive( producto ) );
+        dispatch( uiOpenModal() );
     }
     return (
         <div className="noticia-list-item">
             <div className="item-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Casquette_a_helice.jpg/220px-Casquette_a_helice.jpg"/>
+                <img alt="hello" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Casquette_a_helice.jpg/220px-Casquette_a_helice.jpg"/>
             </div>
             <div className="item-content">
                 <p className="item-content-title">{ tituloProducto }</p>
@@ -28,10 +22,10 @@ export const ListaNoticiasItem = ({ producto }) => {
                 <p>{ descripcionProducto }</p>
             </div>
             <div className="item-options">
-            <button className="btn btn-outline-success" onClick={ onDoubleClick }>
+            {/* <button className="btn btn-outline-success" onClick={ onSelectEvent }>
                 <i className="fas fa-eye"></i>
-            </button>
-            <button className="btn btn-outline-warning" onClick={ ()=>console.log('asd') }>
+            </button> */}
+            <button className="btn btn-outline-warning" onClick={ onSelectEvent }>
                 <i className="fas fa-edit"></i>
             </button>
             <button  className="btn btn-outline-danger" onClick={ ()=>console.log('asd') }>
