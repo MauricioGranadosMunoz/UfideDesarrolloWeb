@@ -48,7 +48,7 @@ export const productosStartLoading = ( producto ) => {
 
         try {
             
-            const resp = await fetchConToken('producto', producto, 'GET');
+            const resp = await fetchConToken('producto', producto, 'POST');
             const body = await resp.json();
 
             // const productos = prepareNoticias(  );

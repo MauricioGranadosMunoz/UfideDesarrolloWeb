@@ -17,7 +17,7 @@ router.use( validarJWT );
 
 
 // Obtener eventos 
-router.get('/', getProductosTienda );
+router.post('/', getProductosTienda );
 
 // Crear un nuevo evento
 router.post(
