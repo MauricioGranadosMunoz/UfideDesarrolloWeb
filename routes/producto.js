@@ -21,7 +21,7 @@ router.post('/', getProductosTienda );
 
 // Crear un nuevo evento
 router.post(
-    '/',
+    '/new',
     [
         check('tituloProducto','El titulo es obligatorio').not().isEmpty(),
         // check('start','Fecha de inicio es obligatoria').custom( isDate ),

@@ -9,7 +9,7 @@ export const productoStartAddNew = ( producto ) => {
         const { uid, name } = getState().auth;
 
         try {
-            const resp = await fetchConToken('producto', producto, 'POST');
+            const resp = await fetchConToken('producto/new', producto, 'POST');
             const body = await resp.json();
 
             if ( body.ok ) {
