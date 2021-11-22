@@ -17,10 +17,18 @@ const ProductoTiendaSchema = Schema({
         type: Number,
         required: true
     },
-    // FechaAgregadoProducto: {
-    //     type: Date,
-    //     required: true
-    // },
+    tallaProducto: {
+        type: Number,
+        required: true
+    },
+    materialesProducto: {
+        type: String,        
+    },
+    cantidaddisponibleProducto: {
+        type: Number,
+        required: true
+    },
+    
     user: {
         type: Schema.Types.ObjectId,
         ref: 'Usuario',
