@@ -6,7 +6,6 @@ import Modal from 'react-modal';
 import { uiCloseModal } from '../../actions/ui';
 import { productoClearActiveProducto, productoStartAddNew, productoStartUpdate } from '../../actions/productos';
 
-
 const customStyles = {
     content: {
         top: '50%',
@@ -14,7 +13,8 @@ const customStyles = {
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
+        transform: 'translate(-50%, -50%)',
+        overflow: 'auto'
     }
 };
 Modal.setAppElement('#root');
@@ -27,6 +27,7 @@ const initEvent = {
     tallaProducto: 23,
     materialesProducto: '',
     cantidaddisponibleProducto: ''
+    
 }
 
 export const ProductosModal = () => {
@@ -39,7 +40,7 @@ export const ProductosModal = () => {
 
     const [formValues, setFormValues] = useState(initEvent);
 
-    const { descripcionProducto, tituloProducto, imagenProducto, cantidaddisponibleProducto } = formValues;
+    const { descripcionProducto, tituloProducto, imagenProducto, cantidaddisponibleProducto, materialesProducto, tallaProducto, precioProducto } = formValues;
 
     useEffect(() => {
         if (activeProduct) {
@@ -94,13 +95,14 @@ export const ProductosModal = () => {
             className="modal"
             overlayClassName="modal-fondo"
         >
-            <h1> {(activeProduct) ? 'Editar Producto' : 'Nuevo Producto'} </h1>
-            <hr />
+            <h3> {(activeProduct) ? 'Editar Producto' : 'Nuevo Producto'} </h3>
+            
             <form
                 className="container"
                 onSubmit={handleSubmitForm}
+                
             >
-                <div className="form-group">
+                <div className="form-group" overflow-y="scroll">
                     <label>Imagen del producto</label>
                     <input
                         type="text"
@@ -136,7 +138,42 @@ export const ProductosModal = () => {
                         onChange={handleInputChange}
                     />
                 </div>
-
+                <div className="form-group">
+                    <label>Talla Disponible</label>
+                    <input
+                        type="number"
+                        className={`form-control ${!titleValid && 'is-invalid'} `}
+                        placeholder="Talla Disponible"
+                        name="tallaProducto"
+                        autoComplete="off"
+                        value={tallaProducto}
+                        onChange={handleInputChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Materiales</label>
+                    <input
+                        type="text"
+                        className={`form-control ${!titleValid && 'is-invalid'} `}
+                        placeholder="Materiales"
+                        name="materialesProducto"
+                        autoComplete="off"
+                        value={materialesProducto}
+                        onChange={handleInputChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Precio</label>
+                    <input
+                        type="number"
+                        className={`form-control ${!titleValid && 'is-invalid'} `}
+                        placeholder="Precio"
+                        name="precioProducto"
+                        autoComplete="off"
+                        value={precioProducto}
+                        onChange={handleInputChange}
+                    />
+                </div>
                 <div className="form-group">
                     <textarea
                         type="text"
