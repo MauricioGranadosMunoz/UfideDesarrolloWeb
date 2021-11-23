@@ -23,7 +23,7 @@ export const productoStartAddNew = ( producto ) => {
 
 
         } catch (error) {
-        //    console.log(error);
+           console.log(error);
         }
 
         
