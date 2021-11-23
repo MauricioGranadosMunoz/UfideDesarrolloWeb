@@ -5,7 +5,7 @@ import { uiOpenModal } from '../../actions/ui';
 import { productoSetActive, productoStartDelete } from '../../actions/productos';
 
 export const ListaNoticiasItem = ({ producto }) => {
-    const { tituloProducto, precioProducto, descripcionProducto, imagenProducto } = producto;
+    const { tituloProducto ,descripcionProducto, imagenProducto, precioProducto, tallaProducto, materialesProducto, cantidaddisponibleProducto } = producto;
     const dispatch = useDispatch();
     const onSelectEvent = () => {
         dispatch(productoSetActive(producto));
@@ -23,7 +23,10 @@ export const ListaNoticiasItem = ({ producto }) => {
             <div className="item-content">
                 <p className="item-content-title">{tituloProducto}</p>
                 <p className="item-content-author"><span>Precio </span>{precioProducto}</p>
+                <p className="item-content-author"><span>Talla disponibles </span>{tallaProducto}</p>
                 <p>{descripcionProducto}</p>
+                <p>{materialesProducto}</p>
+                <p className="item-content-author"><span>Cantidad Disponible </span>{cantidaddisponibleProducto}</p>
             </div>
             <div className="item-options">
                 {/* <button className="btn btn-outline-success" onClick={ onSelectEvent }>

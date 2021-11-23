@@ -11,6 +11,7 @@ export const Productos = () => {
 
     const dispatch = useDispatch();
     const { productos } = useSelector(state => state.producto);
+
     useEffect(() => {
 
         dispatch(productosStartLoading());

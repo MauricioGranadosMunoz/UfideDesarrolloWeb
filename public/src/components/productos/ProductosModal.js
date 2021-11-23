@@ -23,9 +23,11 @@ const initEvent = {
     tituloProducto: '',
     descripcionProducto: '',
     imagenProducto: '',
-    precioProducto: 21,
+    precioProducto: 23,
+    tallaProducto: 23,
+    materialesProducto: '',
+    cantidaddisponibleProducto: ''
 }
-
 
 export const ProductosModal = () => {
 
@@ -37,7 +39,7 @@ export const ProductosModal = () => {
 
     const [formValues, setFormValues] = useState(initEvent);
 
-    const { descripcionProducto, tituloProducto, imagenProducto } = formValues;
+    const { descripcionProducto, tituloProducto, imagenProducto, cantidaddisponibleProducto } = formValues;
 
     useEffect(() => {
         if (activeProduct) {
@@ -119,6 +121,18 @@ export const ProductosModal = () => {
                         name="tituloProducto"
                         autoComplete="off"
                         value={tituloProducto}
+                        onChange={handleInputChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Cantidad Disponible</label>
+                    <input
+                        type="number"
+                        className={`form-control ${!titleValid && 'is-invalid'} `}
+                        placeholder="Cantidad Disponible"
+                        name="cantidaddisponibleProducto"
+                        autoComplete="off"
+                        value={cantidaddisponibleProducto}
                         onChange={handleInputChange}
                     />
                 </div>
