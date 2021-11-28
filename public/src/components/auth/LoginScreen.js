@@ -69,12 +69,22 @@ export const LoginScreen = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <input 
+                            <a className="a">
+                           
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span> 
+                                <input 
                                 type="submit"
                                 className="btnSubmit"
-                                value="Login" 
-                            />
+                                value="Login">
+                                </input>
+                            </a>
+                                
+                                
                         </div>
+                        
                     </form>
                 </div>
 
@@ -124,10 +134,17 @@ export const LoginScreen = () => {
                         </div>
 
                         <div className="form-group">
+                        <a className="a">
+                           
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                           <span></span> 
                             <input 
                                 type="submit" 
                                 className="btnSubmit" 
                                 value="Crear cuenta" />
+                         </a>
                         </div>
                     </form>
                 </div>
