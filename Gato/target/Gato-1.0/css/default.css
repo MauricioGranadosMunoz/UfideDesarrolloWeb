@@ -1,0 +1,53 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+}
+
+.top {
+    background: #ff8c00;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.center-content {
+    height: 100vh;
+}
+.form-wrapper {
+    background-color: #fff;
+    padding: 50px 0;
+    border-radius: 20px;
+}
+.form-wrapper .col-sm-1{
+    padding: 0;
+}
+.form-wrapper input {
+    background-color: #ff8c00;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center; 
+}
+.gato-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+.container-2 {
+    margin-bottom: 5px;
+}
+.dice-ganador-label {
+    background: #fff;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 0 0 20px 20px;
+    font-size: 30px;
+    justify-content: center;   
+    color: #ff8c00;
+    font-weight: 500;
+}
