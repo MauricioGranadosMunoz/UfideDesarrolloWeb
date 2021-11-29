@@ -5,7 +5,130 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Outfit', sans-serif;
+    
 }
+
+@media screen and (max-width: 575px) {
+    .login-container{
+        justify-content: center;
+        align-content: center;
+        margin-top: 15%;
+        margin:auto;
+        display:inline-block;
+        padding:40px;
+        
+        
+    }
+    .login-form-1{
+        
+        display:auto;
+        padding:5%;
+        padding-bottom: 15%;
+        margin:5% ;
+        border: 0.5px groove;
+        border-radius: 5px;
+        border-width: 5px;
+        border-color  : rgb(255, 255, 255);
+        box-shadow: 
+        inset 0 0 0.5em 0 rgba(0,178,255,1),
+         0 0 3em 0 rgba(0,178,255,1);
+        background: rgb(0, 0, 0);
+    }
+    .login-form-2{
+        display:auto;
+        padding: 5%;
+        padding-bottom: 15%;;
+        margin:5% ;
+        border: 0.5px groove;
+        border-radius: 5px;
+        
+        border-color: rgb(255, 255, 255);
+        box-shadow:
+        inset 0 0 0.5em 0 rgba(255,0,0), 0 0 3em 0 rgba(255,0,0);
+       
+        background: rgb(0, 0, 0);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .login-container{
+        justify-content: center;
+        align-content: center;
+        margin-top: 15%;
+        margin:auto;
+        display: block;
+        padding:40px;
+        
+        
+    }
+    .login-form-1{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10%;
+        padding:5%;
+        padding-bottom: 15%;
+        border: 0.5px groove;
+        border-radius: 5px;
+        border-width: 5px;
+        border-color  : rgb(255, 255, 255);
+        box-shadow: 
+        inset 0 0 0.5em 0 rgba(0,178,255,1),
+         0 0 3em 0 rgba(0,178,255,1);
+        background: rgb(0, 0, 0);
+    }
+    .login-form-2{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1%;
+        padding: 5%;
+        padding-bottom: 15%;
+        border: 0.5px groove;
+        border-radius: 5px;
+        border-width: 5px;
+        border-color: rgb(255, 255, 255);
+        box-shadow:
+        inset 0 0 0.5em 0 rgb(255, 8, 0), 0 0 3em 0 rgba(255,0,0);
+       
+        background: rgb(0, 0, 0);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .login-container{
+        margin-top: 15%;
+        margin:auto;
+        padding:40px;
+        
+        
+    }
+    .login-form-1{
+        right:2.5%;
+        padding:5%;
+        border: 0.5px groove;
+        border-radius: 5px;
+        border-width: 5px;
+        border-color  : rgb(255, 255, 255);
+        box-shadow: 
+        inset 0 0 0.5em 0 rgba(0,178,255,1),
+         0 0 3em 0 rgba(0,178,255,1);
+        background: rgb(0, 0, 0);
+    }
+    .login-form-2{
+        left:2.5%;
+        display:inline-block;
+        padding: 5%;
+        padding-bottom: 10%;
+        border: 0.5px groove;
+        border-radius: 5px;
+        border-width: 5px;
+        border-color: rgb(255, 255, 255);
+        box-shadow:
+        inset 0 0 0.5em 0 rgb(255, 0, 0), 0 0 3em 0 rgba(255,0,0);
+        background: rgb(0, 0, 0);
+    }
+  }
+
+  
 h3{
     color: #fff;
 
@@ -17,24 +140,10 @@ h3:after{
     filter:blur(15px);
 }
 
-.login-container{
-    margin-top: 15%;
-}
-.login-form-1{
-    border: 0.5px groove;
-    border-radius: 5px;
-    border-width: 5px;
-    border-top-color  : rgb(255, 255, 255);
-    border-left-color: rgb(255, 255, 255);
-    border-bottom-color: rgb(255, 255, 255);
-    box-shadow: 
-    inset 0 0 0.5em 0 rgba(0,178,255,1),
-     0 0 3em 0 rgba(0,178,255,1);
-     
-    padding: 5%;
-    background: rgb(0, 0, 0);
-}
+
+
 .login-form-1 h3{
+    padding: 5%;
     text-align: center;
     color: rgb(255, 255, 255);
     text-shadow:
@@ -48,17 +157,9 @@ h3:after{
     0 0 140px rgba(38,104,127,1),
     0 0 180px rgba(38,104,127,1);
 }
-.login-form-2{
-    border: 0.5px groove;
-    border-radius: 5px;
-    border-width: 5px;
-    border-color: rgb(255, 255, 255);
-    box-shadow:
-    inset 0 0 0.5em 0 rgba(0,178,255,1), 0 0 3em 0 rgba(255,0,0);
-    padding: 5%;
-    background: rgb(0, 0, 0);
-}
+
 .login-form-2 h3{
+    padding: 5%;
     text-align: center;
     color: #fff;
     text-shadow:
@@ -81,13 +182,20 @@ h3:after{
     padding: 1.5%;
     border: none;
     cursor: pointer;
+    
+}
+.btnSubmit::after{
+    content: "";
+    clear: both;
+    display: table;
 }
 .login-form-1 .btnSubmit{
     position: absolute;
     margin-left: 0.1cm;margin-top: 0.07cm;
     display: inline-block;
-    padding: 5px 10px;
-    width: 93px;
+    padding: 0%;
+    width: 95%;
+    padding:5%;
     color: rgba(0,178,255,1);
     background-color: black;
     text-decoration: none;
@@ -108,6 +216,35 @@ h3:after{
     0 0 140px rgba(38,104,127,1),
     0 0 180px rgba(38,104,127,1);
 }
+
+.login-form-2 .btnSubmit{
+    width: 95%;
+    position: absolute;
+    margin-left: 0.1cm;margin-top: 0.07cm;
+    display: inline-block;
+    padding: 3%;
+    color: rgb(255, 0, 0);
+    background-color: black;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.login-form-2 .btnSubmit:hover{
+    color: #ffffff;
+    text-shadow:
+    0 0 5px rgb(255, 0, 0),
+    0 0 10px rgb(255, 8, 0),
+    0 0 20px rgb(255, 38, 0),
+    0 0 40px rgb(127, 71, 38),
+    0 0 80px rgb(127, 38, 38),
+    0 0 90px rgb(127, 38, 38),
+    0 0 100px rgb(127, 38, 38),
+    0 0 140px rgb(127, 38, 38),
+    0 0 180px rgb(127, 38, 38);
+    
+}
+
 a {
     position:absolute;
     margin: 0;
@@ -172,33 +309,8 @@ a:hover span:nth-child(4) {
     transition: 1s;
     transition-delay: 0.75s;
 }
-.login-form-2 .btnSubmit{
-    position: absolute;
-    margin-left: 0.1cm;margin-top: 0.07cm;
-    display: inline-block;
-    padding: 5px 10px;
-    width: 130px;
-    color: rgb(255, 0, 0);
-    background-color: black;
-    text-decoration: none;
-    font-size: 20px;
-    overflow: hidden;
-    transition: 0.2s;
-}
-.login-form-2 .btnSubmit:hover{
-    color: #ffffff;
-    text-shadow:
-    0 0 5px rgb(255, 0, 0),
-    0 0 10px rgb(255, 8, 0),
-    0 0 20px rgb(255, 38, 0),
-    0 0 40px rgb(127, 71, 38),
-    0 0 80px rgb(127, 38, 38),
-    0 0 90px rgb(127, 38, 38),
-    0 0 100px rgb(127, 38, 38),
-    0 0 140px rgb(127, 38, 38),
-    0 0 180px rgb(127, 38, 38);
-    
-}
+
+
 .login-form-2 a {
     position:absolute;
     margin: 0;
@@ -312,3 +424,4 @@ login-form-1 .ForgetPwd{
     font-weight: 600;
     text-decoration: none;
 }
+
