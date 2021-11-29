@@ -1,6 +1,17 @@
-
+body{
+    background-image:url(https://i.pinimg.com/236x/fa/eb/44/faeb443a2b3d292aab4d4ba86eb8260a.jpg);
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
 .noticia-list-item {
-    background-color: #EEF5FD;
+    background-color: #000000;
+    border: 0.5px solid;
+    border-radius: 5px;
+    border-width: 5px;
+    border-width:2px;
+    border-color:#fff;
     display: flex;
     max-height: 200px;
     border-radius: 10px;
@@ -21,6 +32,7 @@
 .noticia-list-item .item-content {
     padding: 15px;
     width: 100%;
+    color:#fff;
 }
 .noticia-list-item .item-content p {
     margin-bottom: 5px;
