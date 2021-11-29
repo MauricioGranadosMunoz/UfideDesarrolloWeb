@@ -41,10 +41,10 @@ body{
         margin:5% ;
         border: 0.5px groove;
         border-radius: 5px;
-        border-width: 5px;
+        
         border-color: rgb(255, 255, 255);
         box-shadow:
-        inset 0 0 0.5em 0 rgba(0,178,255,1), 0 0 3em 0 rgba(255,0,0);
+        inset 0 0 0.5em 0 rgba(255,0,0), 0 0 3em 0 rgba(255,0,0);
        
         background: rgb(0, 0, 0);
     }
@@ -88,7 +88,7 @@ body{
         border-width: 5px;
         border-color: rgb(255, 255, 255);
         box-shadow:
-        inset 0 0 0.5em 0 rgba(0,178,255,1), 0 0 3em 0 rgba(255,0,0);
+        inset 0 0 0.5em 0 rgb(255, 8, 0), 0 0 3em 0 rgba(255,0,0);
        
         background: rgb(0, 0, 0);
     }
@@ -123,7 +123,7 @@ body{
         border-width: 5px;
         border-color: rgb(255, 255, 255);
         box-shadow:
-        inset 0 0 0.5em 0 rgba(0,178,255,1), 0 0 3em 0 rgba(255,0,0);
+        inset 0 0 0.5em 0 rgb(255, 0, 0), 0 0 3em 0 rgba(255,0,0);
         background: rgb(0, 0, 0);
     }
   }

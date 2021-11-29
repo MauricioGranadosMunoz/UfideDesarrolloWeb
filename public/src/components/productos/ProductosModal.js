@@ -149,7 +149,7 @@ export const ProductosModal = () => {
                     ></textarea>
                     <small id="emailHelp" className="form-text text-muted">Información adicional</small>
                 </div>
-
+                
                 <button
                     type="submit"
                     className="btn btn-outline-primary btn-block"
@@ -157,6 +157,7 @@ export const ProductosModal = () => {
                     <i className="far fa-save"></i>
                     <span> Guardar</span>
                 </button>
+                
 
             </form>
 
