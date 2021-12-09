@@ -11,22 +11,22 @@ const ProductoTiendaSchema = Schema({
     },
     imagenProducto: {
         type: String,
-        required: true      
+        // required: true      
     },
     precioProducto: {
         type: Number,
-        required: true
+        // required: true
     },
     tallaProducto: {
         type: Number,
-        required: true
+        // required: true
     },
     materialesProducto: {
         type: String,        
     },
     cantidaddisponibleProducto: {
         type: Number,
-        required: true
+        // required: true
     },
     
     user: {

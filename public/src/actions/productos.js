@@ -1,4 +1,4 @@
-import { fetchConToken } from '../helpers/fetch';
+import { fetchConToken, fetchConTokenData } from '../helpers/fetch';
 import { types } from '../types/types';
 import Swal from 'sweetalert2';
 
@@ -9,7 +9,7 @@ export const productoStartAddNew = ( producto ) => {
         const { uid, name } = getState().auth;
 
         try {
-            const resp = await fetchConToken('producto/new', producto, 'POST');
+            const resp = await fetchConTokenData('producto/new', producto, 'POST');
             const body = await resp.json();
 
             if ( body.ok ) {
