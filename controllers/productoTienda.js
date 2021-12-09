@@ -1,5 +1,7 @@
 const { response } = require('express');
 const ProductoTienda = require('../models/ProductoTienda');
+const cloudinary = require('cloudinary').v2;
+const moment = require('moment');
 
 const getProductosTienda = async( req, res = response ) => {
 
@@ -13,11 +15,20 @@ const getProductosTienda = async( req, res = response ) => {
 }
 
 const crearProductoTienda = async ( req, res = response ) => {
-
-    const productosTienda = new ProductoTienda( req.body );
-
+    let data = JSON.parse(req.body.data);
     try {
-
+        const imageName = `img-${data.tituloProducto}-${moment().format('LLL')}`.replace(/[\s]+|,/g,'-').toLowerCase();
+        await cloudinary.uploader.upload(
+            req.file.path,
+            {public_id: imageName}, 
+            (error, result) => {
+                data = {
+                    ...data,
+                    ['imagenProducto']:result.secure_url
+                  }
+            }
+        );
+        const productosTienda = new ProductoTienda( data );
         productosTienda.user = req.uid;
         
         const productoGuardado = await productosTienda.save();

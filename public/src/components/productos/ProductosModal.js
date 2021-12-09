@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Modal from 'react-modal';
@@ -20,14 +20,14 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 const initEvent = {
-    tituloProducto: '',
-    descripcionProducto: '',
-    imagenProducto: '',
-    precioProducto: 23,
-    tallaProducto: 23,
-    materialesProducto: '',
-    cantidaddisponibleProducto: ''
-    
+    tituloProducto: 'adsads',
+    descripcionProducto: 'asdad',
+    imagenProducto: 'asda',
+    precioProducto: 44,
+    tallaProducto: 43,
+    materialesProducto: 'sdf',
+    cantidaddisponibleProducto: 543
+
 }
 
 export const ProductosModal = () => {
@@ -42,6 +42,8 @@ export const ProductosModal = () => {
 
     const { descripcionProducto, tituloProducto, imagenProducto, cantidaddisponibleProducto, materialesProducto, tallaProducto, precioProducto } = formValues;
 
+    const [payload] = useState(new FormData());
+
     useEffect(() => {
         if (activeProduct) {
             setFormValues(activeProduct);
@@ -55,7 +57,7 @@ export const ProductosModal = () => {
     const handleInputChange = ({ target }) => {
         setFormValues({
             ...formValues,
-            [target.name]: target.value
+            [target.name]: (target.name === 'file') ? target.files[0] : target.value
         });
     }
 
@@ -76,7 +78,10 @@ export const ProductosModal = () => {
         if (activeProduct) {
             dispatch(productoStartUpdate(formValues))
         } else {
-            dispatch(productoStartAddNew(formValues));
+            payload.append('title', 'ss');
+            payload.append('file', formValues.file );
+            payload.append('data',  JSON.stringify( formValues));
+            dispatch(productoStartAddNew(payload));
         }
 
 
@@ -96,13 +101,23 @@ export const ProductosModal = () => {
             overlayClassName="modal-fondo"
         >
             <h3> {(activeProduct) ? 'Editar Producto' : 'Nuevo Producto'} </h3>
-            
+
             <form
                 className="container"
                 onSubmit={handleSubmitForm}
-                
+
             >
                 <div className="form-group" overflow-y="scroll">
+                    <div className='form-group'>
+                        <label htmlFor='file'>File upload</label>
+                        <input
+                            id='file'
+                            name='file'
+                            type='file'
+                            onChange={handleInputChange}
+                            className='form-control'
+                        />
+                    </div>
                     <label>Imagen del producto</label>
                     <input
                         type="text"
@@ -186,7 +201,7 @@ export const ProductosModal = () => {
                     ></textarea>
                     <small id="emailHelp" className="form-text text-muted">Información adicional</small>
                 </div>
-                
+
                 <button
                     type="submit"
                     className="btn btn-outline-primary btn-block"
@@ -194,7 +209,7 @@ export const ProductosModal = () => {
                     <i className="far fa-save"></i>
                     <span> Guardar</span>
                 </button>
-                
+
 
             </form>
 
