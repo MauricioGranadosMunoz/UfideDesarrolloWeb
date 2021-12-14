@@ -1,0 +1,24 @@
+.noticia-list-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    .noticia-list-item {
+        background-color: #000000;
+        border: 2px #fff solid;
+        display: flex;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        color: #fff;
+        .item-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 7px 7px 0 0;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
