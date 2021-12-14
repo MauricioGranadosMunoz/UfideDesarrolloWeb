@@ -12,7 +12,7 @@ export const ListaProductos = ({ productos }) => {
     }
 
     return (
-        <div>
+        <div className="noticia-list-item-wrapper">
             {
                 (typeof (productos) == 'undefined') ? cargadoComponent() : productos.map(producto =>
                     <ListaNoticiasItem key={producto.id} producto={producto} />

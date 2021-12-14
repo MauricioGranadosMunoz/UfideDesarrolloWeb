@@ -21,8 +21,8 @@ export const ListaNoticiasItem = ({ producto }) => {
                 <img alt="hello" src={imagenProducto} />
             </div>
             <div className="item-content">
-                <p className="item-content-title">{tituloProducto}</p>
-                <p className="item-content-author"><span>Precio </span>{precioProducto}</p>
+                <p className="item-content-title">Producto: <span>{tituloProducto}</span></p>
+                <p className="item-content-author">Precio: <span>{precioProducto}</span></p>
                 <p className="item-content-author"><span>Talla disponibles </span>{tallaProducto}</p>
                 <p>{descripcionProducto}</p>
                 <p>{materialesProducto}</p>
