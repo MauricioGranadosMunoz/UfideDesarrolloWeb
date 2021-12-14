@@ -20,5 +20,12 @@
                 object-fit: cover;
             }
         }
+        .item-content, .item-options {
+            padding: 20px;
+        }
+        .item-options {
+            justify-content: center;
+            display: flex;
+        }
     }
 }
