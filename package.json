@@ -1,6 +1,9 @@
 {
   "name": "proyect-ufide-desarrollo-web",
   "version": "1.0.0",
+    "engines": {
+    "node": "6.11.1"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run public\"",
