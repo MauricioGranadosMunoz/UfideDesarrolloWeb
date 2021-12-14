@@ -38,6 +38,22 @@ body{
     margin-bottom: 20px;
     justify-content: space-between;
 }
+.noticia-list-item .item-content .item-content-result.precio,
+.noticia-list-item .item-content .item-content-result.talla,
+.noticia-list-item .item-content .item-content-result.materales,
+.noticia-list-item .item-content .item-content-result.cantidad {
+    color: #F2AA4CFF;
+    font-size: 17px;
+}
+.modal-h3 {
+    color: #101820FF;
+}
+.noticia-list-item .item-content .item-content-result.precio span,
+.noticia-list-item .item-content .item-content-result.talla span,
+.noticia-list-item .item-content .item-content-result.materales span,
+.noticia-list-item .item-content .item-content-result.cantidad span {
+    color: #fff;
+}
 .noticia-list-item .item-content-result.descrip {
     margin-bottom: 40px;
 }
@@ -57,6 +73,13 @@ body{
     box-shadow: 0 0 3em 0 #dc3545;
     color: #ffffff;
 }
+.navbar {
+    background-color: #101820FF !important;
+}
+.navbar .navbar-brand {
+    color: #F2AA4CFF;
+}
+
 
 .noticia-list-item .item-image {
     width: 350px;
