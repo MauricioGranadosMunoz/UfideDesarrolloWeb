@@ -100,7 +100,7 @@ export const ProductosModal = () => {
             className="modal"
             overlayClassName="modal-fondo"
         >
-            <h3> {(activeProduct) ? 'Editar Producto' : 'Nuevo Producto'} </h3>
+            <h3 className="modal-h3"> {(activeProduct) ? 'Editar Producto' : 'Nuevo Producto'} </h3>
 
             <form
                 className="container"

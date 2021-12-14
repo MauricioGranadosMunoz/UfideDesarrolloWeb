@@ -23,10 +23,10 @@ export const ListaNoticiasItem = ({ producto }) => {
             <div className="item-content">
                 <p className="item-content-result title"><span>{tituloProducto}</span></p>
                 <p className="item-content-result descrip"><span>{descripcionProducto}</span></p>
-                <p className="item-content-result precio">Precio: <span>{precioProducto}</span></p>
+                <p className="item-content-result precio">Precio: <span>${precioProducto}</span></p>
                 <p className="item-content-result talla">Talla: <span>{tallaProducto}</span></p>
                 <p className="item-content-result materales">Materiales: <span>{materialesProducto}</span></p>
-                <p className="item-content-result cantidad">Cantidad: <span>{cantidaddisponibleProducto}</span></p>
+                <p className="item-content-result cantidad">Cantidad: <span>{cantidaddisponibleProducto} unidades</span></p>
             </div>
             <div className="item-options">
                 {/* <button className="btn btn-outline-success" onClick={ onSelectEvent }>
