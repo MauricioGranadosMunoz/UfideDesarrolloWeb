@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Modal from 'react-modal';
@@ -20,13 +20,13 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 const initEvent = {
-    tituloProducto: 'adsads',
-    descripcionProducto: 'asdad',
-    imagenProducto: 'asda',
-    precioProducto: 44,
-    tallaProducto: 43,
-    materialesProducto: 'sdf',
-    cantidaddisponibleProducto: 543
+    tituloProducto: '',
+    descripcionProducto: '',
+    imagenProducto: '',
+    precioProducto: 0,
+    tallaProducto: 0,
+    materialesProducto: '',
+    cantidaddisponibleProducto: 0
 
 }
 
@@ -78,7 +78,6 @@ export const ProductosModal = () => {
         if (activeProduct) {
             dispatch(productoStartUpdate(formValues))
         } else {
-            payload.append('title', 'ss');
             payload.append('file', formValues.file );
             payload.append('data',  JSON.stringify( formValues));
             dispatch(productoStartAddNew(payload));
@@ -86,6 +85,7 @@ export const ProductosModal = () => {
 
 
         setTitleValid(true);
+        dispatch(productoClearActiveProducto());
         closeModal();
 
     }
@@ -108,7 +108,7 @@ export const ProductosModal = () => {
 
             >
                 <div className="form-group" overflow-y="scroll">
-                    <div className='form-group'>
+                    <div className={`form-group ${activeProduct && 'hide-upload'} `}>
                         <label htmlFor='file'>File upload</label>
                         <input
                             id='file'
@@ -118,6 +118,7 @@ export const ProductosModal = () => {
                             className='form-control'
                         />
                     </div>
+                    <div className={`form-group ${!activeProduct && 'hide-upload'} `}>
                     <label>Imagen del producto</label>
                     <input
                         type="text"
@@ -128,6 +129,7 @@ export const ProductosModal = () => {
                         value={imagenProducto}
                         onChange={handleInputChange}
                     />
+                    </div>
                 </div>
                 <div className="form-group">
                     <label>Nombre del producto</label>

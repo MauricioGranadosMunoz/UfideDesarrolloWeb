@@ -21,12 +21,12 @@ export const ListaNoticiasItem = ({ producto }) => {
                 <img alt="hello" src={imagenProducto} />
             </div>
             <div className="item-content">
-                <p className="item-content-title">Producto: <span>{tituloProducto}</span></p>
-                <p className="item-content-author">Precio: <span>{precioProducto}</span></p>
-                <p className="item-content-author"><span>Talla disponibles </span>{tallaProducto}</p>
-                <p>{descripcionProducto}</p>
-                <p>{materialesProducto}</p>
-                <p className="item-content-author"><span>Cantidad Disponible </span>{cantidaddisponibleProducto}</p>
+                <p className="item-content-result title"><span>{tituloProducto}</span></p>
+                <p className="item-content-result descrip"><span>{descripcionProducto}</span></p>
+                <p className="item-content-result precio">Precio: <span>{precioProducto}</span></p>
+                <p className="item-content-result talla">Talla: <span>{tallaProducto}</span></p>
+                <p className="item-content-result materales">Materiales: <span>{materialesProducto}</span></p>
+                <p className="item-content-result cantidad">Cantidad: <span>{cantidaddisponibleProducto}</span></p>
             </div>
             <div className="item-options">
                 {/* <button className="btn btn-outline-success" onClick={ onSelectEvent }>
